@@ -1,0 +1,18 @@
+{
+  "Fungal infection": "Itraconazole",
+  "Allergy": "Cetirizine",
+  "GERD": "Famotidine",
+  "Chronic cholestasis": "Ursodeoxycholic acid",
+  "Drug Reaction": "Antihistamines",
+  "Peptic ulcer disease": "Omeprazole",
+  "AIDS": "Antiretroviral Therapy",
+  "Diabetes": "Metformin",
+  "Gastroenteritis": "ORS + Ranitidine",
+  "Bronchial Asthma": "Salbutamol Inhaler",
+  "Hypertension": "Amlodipine",
+  "Migraine": "Ibuprofen",
+  "Paralysis": "Physiotherapy + Aspirin",
+  "Chicken pox": "Acyclovir",
+  "Dengue": "Paracetamol + Fluids",
+  "COVID": "Dolo 650 + Vitamin C"
+}
