@@ -5,14 +5,14 @@ import pickle
 import json
 
 # Load the model
-model = pickle.load(open(".model/disease_model.pkl", "rb"))
+model = pickle.load(open("model/disease_model.pkl", "rb"))
 
 # Load the medicine mapping
 with open("medicine_map.json") as f:
     medicine_map = json.load(f)
 
 # Load dataset to get symptom list
-df = pd.read_csv(".data/Training.csv")
+df = pd.read_csv("data/Training.csv")
 symptoms = df.columns[:-1].tolist()   # all columns except prognosis
 
 st.title("🩺 Disease Prediction & Medicine Recommender")
@@ -38,6 +38,7 @@ if st.button("Predict"):
 
         st.success(f"### 🧬 Predicted Disease: **{prediction}**")
         st.info(f"### 💊 Recommended Medicine: **{medicine}**")
+
 
 
 
