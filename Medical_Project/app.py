@@ -5,7 +5,7 @@ import pickle
 import json
 
 # Load the model
-model = pickle.load(open("disease_model.pkl", "rb"))
+model = pickle.load(open("model/disease_model.pkl", "rb"))
 
 # Load the medicine mapping
 with open("medicine_map.json") as f:
