@@ -40,7 +40,7 @@ The project uses the *Disease Prediction Using Machine Learning* dataset from Ka
 
 ## 🛠 Project Structure
 
-Medical_Project/
+Disease_Prediction
 │
 ├── app.py # Streamlit app
 ├── medicine_map.json # Disease → Medicine mapping
@@ -54,7 +54,7 @@ Medical_Project/
 │ └── disease_model.pkl # Trained ML model
 │
 └── scripts/
-└── train_model.py # Training script
+    |── train_model.py # Training script
 
 
 ---
