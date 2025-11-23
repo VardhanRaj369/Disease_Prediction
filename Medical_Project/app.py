@@ -5,7 +5,7 @@ import pickle
 import json
 
 # Load the model
-model = pickle.load(open("model/disease_model.pkl", "rb"))
+model = pickle.load(open(".model/disease_model.pkl", "rb"))
 
 # Load the medicine mapping
 with open("medicine_map.json") as f:
@@ -38,5 +38,6 @@ if st.button("Predict"):
 
         st.success(f"### 🧬 Predicted Disease: **{prediction}**")
         st.info(f"### 💊 Recommended Medicine: **{medicine}**")
+
 
 
